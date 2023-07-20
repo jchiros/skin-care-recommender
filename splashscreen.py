@@ -13,7 +13,7 @@ new_height = 400
 logo_image = logo_image.resize((new_width, new_height))
 logo = ImageTk.PhotoImage(logo_image)
 
-height = 550  # Adjust the height to accommodate the label
+height = 550  
 width = 530
 x = (root.winfo_screenwidth() // 2 - (width // 2))
 y = (root.winfo_screenheight() // 2 - (height // 2))

@@ -88,6 +88,7 @@ def select_image():
         img = cv2.resize(img, (720, 640))
         frame = img.copy()
 
+        #Age detection
         age_weights = "age_deploy.prototxt"
         age_config = "age_net.caffemodel"
         age_Net = cv2.dnn.readNet(age_config, age_weights)
@@ -95,7 +96,8 @@ def select_image():
         ageList = ['(0-2)', '(4-6)', '(8-12)', '(15-20)',
                    '(25-32)', '(38-43)', '(48-53)', '(60-100)']
         model_mean = (78.4263377603, 87.7689143744, 114.895847746)
-
+        
+        #Gender Detection
         gender_weights = "gender_deploy.prototxt"
         gender_config = "gender_net.caffemodel"
         gender_Net = cv2.dnn.readNet(gender_config, gender_weights)
